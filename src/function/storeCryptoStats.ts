@@ -2,7 +2,7 @@ import { buildURLPrice } from "./buildpriceURL.ts";
 import type { optionsURL, coinData } from "./types/helperTypes.ts";
 import { saveCoinInfo } from "../db/saveCoinInfo.ts";
 
-export async function storeCryptoStats(){
+export async function storeCryptoStats(): Promise<void>{
     const urlOptions : optionsURL = {
         pathname: '/api/v3/simple/price',
         vsCurrencies: ["usd"],

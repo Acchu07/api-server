@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0",
-    "mongodb": "^6.16.0"
+    "mongodb": "^6.16.0",
+    "nats": "^2.29.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",

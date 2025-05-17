@@ -4,11 +4,13 @@ import { connectToMongo } from "./db/connectMongoDBCommunity.ts";
 // import populateDB from "./scripts/tempData.ts";
 // import { storeCryptoStats } from "./function/storeCryptoStats.ts";
 import statsRouter from "./routes/stats.ts";
+import deviationRouter from "./routes/deviation.ts";
 
 const app = express();
 
 
 app.use("/api/stats", statsRouter);
+app.use("/api/deviation", deviationRouter);
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     console.error(err.stack);
